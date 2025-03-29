@@ -1,4 +1,7 @@
 using Microsoft.OpenApi.Models;
+using WaterBar.Application;
+using WaterBar.Infrastructure;
+using WaterBar.Persistence;
 
 namespace WaterBar.Api;
 
@@ -14,6 +17,10 @@ public class Startup
     // This method gets called by the runtime. Use this method to add services to the container
     public void ConfigureServices(IServiceCollection services)
     {
+        services.AddApplication();
+        services.AddInfrastructure(Configuration);
+        services.AddPersistence(Configuration);
+
         services.AddHttpContextAccessor();
         services.AddSwaggerGen(c =>
         {

@@ -17,4 +17,8 @@
 	<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="7.3.2" />
 	<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="7.3.2" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WaterBar.Infrastructure\WaterBar.Infrastructure.csproj" />
+    <ProjectReference Include="..\WaterBar.Persistence\WaterBar.Persistence.csproj" />
+  </ItemGroup>
 </Project>
